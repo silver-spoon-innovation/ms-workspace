@@ -21,6 +21,7 @@ _testmain.go
 
 *.test
 *.prof
+logs
 ms-demo-golang
 ms-demo-node
 ms-template

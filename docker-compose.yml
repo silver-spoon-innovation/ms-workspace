@@ -2,13 +2,14 @@ version: "3.9"
 services:
   traefik:
     container_name: traefik
-    image: traefik
+    image: traefik:2.9
     labels:
       - traefik.enable=false
-    command: --web --docker.domain.localhost --logLevel=DEBUG
+    command: --web --docker --docker.domain=docker.localhost
     ports:
       - "9080:80"
       - "9880:8080"
     volumes:
       - ./traefik.yml:/etc/traefik/traefik.yml
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs/:/logs/
