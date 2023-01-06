@@ -5,15 +5,15 @@ default: update start
 
 .PHONY: start
 start: 
-	- ./bin/start.sh
+	- bash ./bin/start.sh
 
 .PHONY: stop
 stop: 
-	- ./bin/stop.sh
+	- bash ./bin/stop.sh
 
 .PHONY: update
 update:
-	- ./bin/checkout-linux
+	- bash ./bin/checkout.sh
 
 .PHONY: ps
 ps:
